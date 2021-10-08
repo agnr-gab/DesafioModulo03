@@ -1,6 +1,21 @@
 public class Main {
 
-    public static void main(String[] args) throws Exception{
-   Sistema.cadastrarVenda();
+    public static void main(String[] args) throws Exception {
+
+        boolean loop = true;
+
+        while (loop) {
+
+            try {
+                Sistema.cadastrarCliente();
+                //loop = Sistema.executar();
+                System.out.println();
+
+            } catch (Exception erro) {
+                System.out.println(erro.getMessage());
+
+            }
+        }
+
     }
 }

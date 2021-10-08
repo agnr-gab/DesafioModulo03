@@ -11,6 +11,7 @@ public class ServiceVendedor implements Verificar {
     public static Vendedor cadastrarVendedor(String nome, String cpf, String email) {
         Vendedor vendedor = new Vendedor(nome, cpf, email);
         listaVendedores.add(vendedor);
+        System.out.println("\n\tCadastro vendedor feito com sucesso!!!");
         return vendedor;
     }
 
