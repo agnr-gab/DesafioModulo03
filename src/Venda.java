@@ -46,10 +46,10 @@ public class Venda {
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("___Cliente___ " + super.toString());
-        retorno.append("___Funcionário Responsável___" + super.toString());
-        retorno.append("Valor da venda: R$" + valor + " reais");
-        retorno.append("Data de registro: R$" + data);
+        retorno.append("\t\t\t|___Cliente___| \n" + cliente);
+        retorno.append("\n\t\t|___Funcionário Responsável___|\n" + vendedor);
+        retorno.append("\nValor da venda: R$" + valor + " reais");
+        retorno.append("\tData de registro: R$" + data);
         return retorno.toString();
     }
 }
