@@ -7,7 +7,7 @@ public class ServiceCliente {
     //listar clientes cadastrados
     private static List<Cliente> listaClientes = new ArrayList<>();
 
-    public static Cliente cadastrarClientes(String nome, String cpf, String email) {
+    public static Cliente cadastrarCliente(String nome, String cpf, String email) {
         Cliente cliente = new Cliente(nome, cpf, email);
         listaClientes.add(cliente);
         return cliente;
