@@ -71,10 +71,10 @@ public class Sistema {
                 ServiceVenda.listarVendas();
 
             } else if (entradaUsuario == 5) {
-                ServiceCliente.listarClientes();
+                ServiceVendedor.listarVendedores();
 
             } else if (entradaUsuario == 6) {
-                Venda venda = cadastrarVenda();
+                ServiceCliente.listarClientes();
 
             } else if (entradaUsuario == 7) {
                 loop = false;
