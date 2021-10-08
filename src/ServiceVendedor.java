@@ -21,4 +21,26 @@ public class ServiceVendedor implements Verificar {
                 throw new Exception("Esse CPF não está cadastrado! Faça o cadastro primeiramente!");
         }
     }
+    public void validarEmailArroba(String email) throws Exception {
+        if (!email.contains("@")) {
+            throw new Exception("O Email digitado não é válido. Tente novamente!");
+        }
+    }
+
+    public static void validarEmailRepetido(String email) throws Exception {
+        for (Vendedor referenciaVendedor : listaVendedores) {
+            if (referenciaVendedor.getEmail().equalsIgnoreCase(email)) {
+                throw new Exception("Esse e-mail já foi cadastrado! Tente novamente!");
+            } else {
+                throw new Exception("E-mail não encontrado! Cadastre primeiramente!");
+            }
+        }
+    }
+
+    public static void validarCpfRepetido(String cpf) throws Exception {
+        for (Vendedor referenciaVendedor : listaVendedores) {
+            if (referenciaVendedor.getCpf().equals(cpf))
+                throw new Exception("Esse CPF já foi cadastrado! Tente novamente!");
+        }
+    }
 }
