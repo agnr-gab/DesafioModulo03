@@ -31,7 +31,20 @@ public class Sistema {
         String nome = leitorDados("\n\tDigite o nome: ").nextLine();
         String cpf = leitorDados("\tDigite o CPF: ").nextLine();
         String email = leitorDados("\tDigite o e-mail: ").nextLine();
-        System.out.println("\n\tCadastro cliente feito com sucesso!!!");
+        System.out.println("\n\tCadastro do cliente feito com sucesso!!!");
         return ServiceCliente.cadastrarCliente(nome, cpf, email);
+    }
+    public static Venda cadastrarVenda()throws Exception{
+
+        System.out.println("\n\t\t\t____Cadastro vendas____");
+        String cpfCliente = leitorDados("\tDigite o cpf do cliente: ").nextLine();
+        ServiceCliente.verificarCpfCadastrado(cpfCliente);
+        String cpfVendedor = leitorDados("\tDigite o cpf do vendedor: ").nextLine();
+
+        double valor = leitorDados("\n\tDigite o valor a ser pago: ").nextDouble();
+        String data = leitorDados("\tDigite a data de registro da venda: ").nextLine();
+        System.out.println("\n\tCadastro cliente feito com sucesso!!!");
+        //antes de cadastrar a venda verificar se cliente/vendedor estão cadastrados?????
+        return ServiceVenda.cadastrarVenda(valor, data);
     }
 }
