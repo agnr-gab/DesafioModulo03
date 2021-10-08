@@ -8,9 +8,13 @@ public class ServiceVendedor implements Verificar {
 
     private static List<Vendedor> listaVendedores = new ArrayList<>();
 
-    public static Vendedor cadastrarVendedor(String nome, String cpf, String email) {
+    public static Vendedor cadastrarVendedor(String nome, String cpf, String email)throws Exception{
         Vendedor vendedor = new Vendedor(nome, cpf, email);
         listaVendedores.add(vendedor);
+        validarEmailArroba(email);
+        validarEmailRepetido(email);
+        validarCpfRepetido(cpf);
+
         System.out.println("\n\tCadastro vendedor feito com sucesso!!!");
         return vendedor;
     }
@@ -21,7 +25,7 @@ public class ServiceVendedor implements Verificar {
                 throw new Exception("Esse CPF não está cadastrado! Faça o cadastro primeiramente!");
         }
     }
-    public void validarEmailArroba(String email) throws Exception {
+    public static void validarEmailArroba(String email) throws Exception {
         if (!email.contains("@")) {
             throw new Exception("O Email digitado não é válido. Tente novamente!");
         }

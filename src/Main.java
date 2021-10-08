@@ -7,7 +7,7 @@ public class Main {
         while (loop) {
 
             try {
-                Sistema.cadastrarCliente();
+                Sistema.cadastrarVendedor();
                 //loop = Sistema.executar();
                 System.out.println();
 
