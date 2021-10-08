@@ -14,4 +14,10 @@ public class ServiceVendedor {
         return vendedor;
     }
 
+    public static void verificarCpfVendedorCadastrado(String cpf) throws Exception {
+        for (Vendedor referenciaVendedor : listaVendedores) {
+            if (!referenciaVendedor.getCpf().equals(cpf))
+                throw new Exception("Esse CPF não está cadastrado! Faça o cadastro primeiramente!");
+        }
+    }
 }
