@@ -4,6 +4,11 @@ public class Venda {
     private double valor;
     private String data;
 
+    public Venda(double valor, String data) {
+        this.valor = valor;
+        this.data = data;
+    }
+
     public Venda(Cliente cliente, Vendedor vendedor, double valor, String data) {
         this.cliente = cliente;
         this.vendedor = vendedor;
