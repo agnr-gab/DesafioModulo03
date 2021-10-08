@@ -26,4 +26,12 @@ public class Sistema {
         System.out.println("\n\tCadastro vendedor feito com sucesso!!!");
         return ServiceVendedor.cadastrarVendedor(nome, cpf, email);
     }
+    public static Cliente cadastrarCliente() {
+        System.out.println("\n\t\t\t____Cadastro cliente____");
+        String nome = leitorDados("\n\tDigite o nome: ").nextLine();
+        String cpf = leitorDados("\tDigite o CPF: ").nextLine();
+        String email = leitorDados("\tDigite o e-mail: ").nextLine();
+        System.out.println("\n\tCadastro cliente feito com sucesso!!!");
+        return ServiceCliente.cadastrarCliente(nome, cpf, email);
+    }
 }
