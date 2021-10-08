@@ -26,6 +26,7 @@ public class Sistema {
         System.out.println("\n\tCadastro vendedor feito com sucesso!!!");
         return ServiceVendedor.cadastrarVendedor(nome, cpf, email);
     }
+
     public static Cliente cadastrarCliente() {
         System.out.println("\n\t\t\t____Cadastro cliente____");
         String nome = leitorDados("\n\tDigite o nome: ").nextLine();
@@ -34,17 +35,20 @@ public class Sistema {
         System.out.println("\n\tCadastro do cliente feito com sucesso!!!");
         return ServiceCliente.cadastrarCliente(nome, cpf, email);
     }
-    public static Venda cadastrarVenda()throws Exception{
+
+    public static Venda cadastrarVenda() throws Exception {
 
         System.out.println("\n\t\t\t____Cadastro vendas____");
+
         String cpfCliente = leitorDados("\tDigite o cpf do cliente: ").nextLine();
-        ServiceCliente.verificarCpfCadastrado(cpfCliente);
+        //Verificar.validarCpfRepetido(cpfCliente);
         String cpfVendedor = leitorDados("\tDigite o cpf do vendedor: ").nextLine();
+       // ServiceVendedor.validarCpfRepetido(cpfVendedor);
 
         double valor = leitorDados("\n\tDigite o valor a ser pago: ").nextDouble();
         String data = leitorDados("\tDigite a data de registro da venda: ").nextLine();
-        System.out.println("\n\tCadastro cliente feito com sucesso!!!");
-        //antes de cadastrar a venda verificar se cliente/vendedor estão cadastrados?????
+        System.out.println("\n\tCadastro da venda feito com sucesso!!!");
+
         return ServiceVenda.cadastrarVenda(valor, data);
     }
 }

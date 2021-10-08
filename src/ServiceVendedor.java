@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class ServiceVendedor {
+public class ServiceVendedor implements Verificar {
     //cadastrar vendedores
     //verificar vendedores cadastrados
     //listar vendedores cadastrados
