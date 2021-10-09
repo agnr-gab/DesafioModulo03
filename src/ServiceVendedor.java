@@ -36,8 +36,6 @@ public class ServiceVendedor implements Verificar {
         for (Vendedor referenciaVendedor : listaVendedores) {
             if (referenciaVendedor.getEmail().equalsIgnoreCase(email)) {
                 throw new Exception("Esse e-mail já foi cadastrado! Tente novamente!");
-            } else {
-                throw new Exception("E-mail não encontrado! Cadastre primeiramente!");
             }
         }
     }
