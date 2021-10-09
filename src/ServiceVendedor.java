@@ -9,11 +9,11 @@ public class ServiceVendedor implements Verificar {
     private static List<Vendedor> listaVendedores = new ArrayList<>();
 
     public static Vendedor cadastrarVendedor(String nome, String cpf, String email) throws Exception {
-        Vendedor vendedor = new Vendedor(nome, cpf, email);
-        listaVendedores.add(vendedor);
         validarEmailArroba(email);
         validarEmailRepetido(email);
         validarCpfRepetido(cpf);
+        Vendedor vendedor = new Vendedor(nome, cpf, email);
+        listaVendedores.add(vendedor);
 
         System.out.println("\n\tCadastro vendedor feito com sucesso!!!");
         return vendedor;
@@ -51,11 +51,11 @@ public class ServiceVendedor implements Verificar {
 
     public static void listarVendedores() {
         System.out.println("\n\t\t\t____Vendedores cadastrados____");
-        for (int i = 0; i < listaVendedores.size(); i++) {
-            System.out.println(i);
-
+        for (Vendedor referenciaVendedor : listaVendedores) {
+            System.out.println(referenciaVendedor);
         }
     }
 }
+
 
 

@@ -7,8 +7,8 @@ public class Main {
         while (loop) {
 
             try {
-                Sistema.cadastrarVendedor();
-                //loop = Sistema.executar();
+                //Sistema.cadastrarVendedor();
+                loop = Sistema.executar();
                 System.out.println();
 
             } catch (Exception erro) {

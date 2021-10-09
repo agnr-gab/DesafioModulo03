@@ -30,7 +30,7 @@ public class Sistema {
         return ServiceCliente.cadastrarCliente(nome, cpf, email);
     }
 
-    public static Vendedor cadastrarVendedor() throws Exception{
+    public static Vendedor cadastrarVendedor() throws Exception {
         System.out.println("\n\t\t\t____Cadastro vendedor____");
         String nome = leitorDados("\n\tDigite o nome: ").nextLine();
         String cpf = leitorDados("\tDigite o CPF: ").nextLine();

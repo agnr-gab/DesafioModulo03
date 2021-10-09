@@ -38,21 +38,20 @@ public class ServiceCliente {
     }
 
     public static Cliente cadastrarCliente(String nome, String cpf, String email) throws Exception {
-        Cliente cliente = new Cliente(nome, cpf, email);
-        listaClientes.add(cliente);
         validarEmailArroba(email);
         verificarEmailClienteExistente(email);
         verificarCpfClienteExistente(cpf);
+        Cliente cliente = new Cliente(nome, cpf, email);
+        listaClientes.add(cliente);
         System.out.println("\n\tCadastro cliente feito com sucesso!!!");
         return cliente;
     }
 
     public static void listarClientes() {
 
-        System.out.println("\n\t\t\t____Vendas realizadas____");
-        for (int i = 0; i < listaClientes.size(); i++) {
-            System.out.println(i);
-
+        System.out.println("\n\t\t\t____Clientes cadastrados____");
+        for (Cliente referenciaCliente : listaClientes) {
+            System.out.println(referenciaCliente);
         }
     }
 }

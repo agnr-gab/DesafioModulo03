@@ -11,11 +11,11 @@ public class ServiceVenda {
         listaVendas.add(venda);
         return venda;
     }
+
     public static void listarVendas() {
         System.out.println("\n\t\t\t____Vendas realizadas____");
-        for (int i = 0; i < listaVendas.size(); i++) {
-            System.out.println(i);
-
+        for (Venda referenciaVenda : listaVendas) {
+            System.out.println(referenciaVenda);
         }
     }
 }
