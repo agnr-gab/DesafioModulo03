@@ -1,4 +1,4 @@
-public class Venda {
+public class Venda extends Pessoa{
     private Cliente cliente;
     private Vendedor vendedor;
     private double valor;

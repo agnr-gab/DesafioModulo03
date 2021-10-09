@@ -9,6 +9,7 @@ public class ServiceVenda {
     public static Venda cadastrarVenda(double valor, String data) {
         Venda venda = new Venda(valor, data);
         listaVendas.add(venda);
+        System.out.println("\n\tCadastro da venda feito com sucesso!!!");
         return venda;
     }
 
