@@ -17,7 +17,9 @@ public class Sistema {
         System.out.println("\t\n[4] para _listar_ todas VENDAS já cadastradas");
         System.out.println("\t\n[5] para _listar_ todes VENDEDORES já cadastrades");
         System.out.println("\t\n[6] para _listar_ todes CLIENTES já cadastrades");
-        System.out.println("\t\n[7] para *FINALIZAR* sistema");
+        System.out.println("\t\n[7] para =pesquisar= COMPRAS realizadas");
+        System.out.println("\t\n[8] para =pesquisar= VENDAS realizadas");
+        System.out.println("\t\n[9] para *FINALIZAR* sistema");
     }
 
     public static Cliente cadastrarCliente() throws Exception {
@@ -25,7 +27,7 @@ public class Sistema {
         String nome = leitorDados("\n\tDigite o nome: ").nextLine();
         String cpf = leitorDados("\tDigite o CPF: ").nextLine();
         String email = leitorDados("\tDigite o e-mail: ").nextLine();
-       //System.out.println("\n\tCadastro do cliente feito com sucesso!!!");
+        //System.out.println("\n\tCadastro do cliente feito com sucesso!!!");
 
         return ServiceCliente.cadastrarCliente(nome, cpf, email);
     }
@@ -48,7 +50,24 @@ public class Sistema {
         String data = leitorDados("\tDigite a data de registro da venda: ").nextLine();
         //System.out.println("\n\tCadastro da venda feito com sucesso!!!");
 
-        return ServiceVenda.cadastrarVenda(cliente, vendedor,valor, data);
+        return ServiceVenda.cadastrarVenda(cliente, vendedor, valor, data);
+    }
+
+    public static List<Venda> consultarCompras() throws Exception {
+        System.out.println("\n\t\t\t____Consulta de Compras Realizadas____");
+        String cpf = leitorDados("\tDigite o CPF do cliente:").nextLine();
+        ServiceCliente.verificarCpfClienteCadastrado(cpf);
+        List<Venda> listaCompras = ServiceVenda.consultarCompras(cpf);
+        return listaCompras;
+    }
+
+    public static List<Venda> consultarVendas() throws Exception {
+        System.out.println("\n\t\t\t____Consulta de Vendas Realizadas____");
+        String email = leitorDados("\tDigite o e-mail do vendedor:").nextLine();
+        ServiceVendedor.validarEmailArroba(email);
+        ServiceVendedor.verificarEmailVendedorCadastrado(email);
+        List<Venda> listaCompras = ServiceVenda.consultarVendas(email);
+        return listaCompras;
     }
 
     public static boolean executar() throws Exception {
@@ -77,8 +96,14 @@ public class Sistema {
                 ServiceCliente.listarClientes();
 
             } else if (entradaUsuario == 7) {
+                consultarCompras();
+
+            } else if (entradaUsuario == 8) {
+                consultarVendas();
+
+            } else if (entradaUsuario == 9) {
                 loop = false;
-                System.out.println("\n\t\t\t____Sistema finalizado____! \t\t\nVolte sempre!");
+                System.out.println("\n\t\t\t____Sistema finalizado____ \n\t\t\t\t____Volte sempre____");
 
             } else {
                 System.out.println("***\tA opção digitada é inválida. Verifique e tente novamente!***");
