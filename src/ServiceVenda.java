@@ -23,24 +23,26 @@ public class ServiceVenda {
         }
     }
 
-    public static List<Venda> consultarCompras(String cpf) throws Exception{
-        ServiceCliente.verificarCpfClienteCadastrado(cpf);
+    public static List<Venda> consultarCompras(String cpf) {
+        List<Venda> listaCompras = new ArrayList<>();
         for (Venda referenciaCliente : listaVendas) {
-            if (referenciaCliente.getCpf().equals(cpf)) {
-                listaVendas.add(referenciaCliente);
+            if (referenciaCliente.getCliente().getCpf().equals(cpf)) {
+                listaCompras.add(referenciaCliente);
                 System.out.println(referenciaCliente);
             }
         }
-        return listaVendas;
+        return listaCompras;
     }
 
     public static List<Venda> consultarVendas(String email) {
+        List<Venda> listaVendasVendedores = new ArrayList<>();
         for (Venda referenciaVendedor : listaVendas) {
-            if (referenciaVendedor.getEmail().equals(email)) {
+            if (referenciaVendedor.getVendedor().getEmail().equalsIgnoreCase(email)) {
+                listaVendasVendedores.add(referenciaVendedor);
                 System.out.println(referenciaVendedor);
 
             }
         }
-        return listaVendas;
+        return listaVendasVendedores;
     }
 }
