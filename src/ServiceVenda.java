@@ -22,4 +22,20 @@ public class ServiceVenda {
             System.out.println(referenciaVenda);
         }
     }
+    public void consultarCompras(String cpf){
+        for (Venda referenciaCliente : listaVendas) {
+            if (referenciaCliente.getCpf().equals(cpf)) {
+                System.out.println(referenciaCliente);
+            }
+        }
+
+    }
+    public void consultarVendas(String email){
+        for (Venda referenciaVendedor : listaVendas) {
+            if (referenciaVendedor.getEmail().equals(email)) {
+                System.out.println(referenciaVendedor);
+            }
+        }
+
+    }
 }
