@@ -6,11 +6,11 @@ public class ServiceVenda {
     //listar as vendas
     public static List<Venda> listaVendas = new ArrayList<>();
 
-    public static Venda cadastrarVenda(String cpfCliente, String cpfVendedor, double valor, String data) throws Exception{
+    public static Venda cadastrarVenda(String cpfCliente, String cpfVendedor, double valor, String data) throws Exception {
         Cliente cliente = ServiceCliente.verificarCpfClienteCadastrado(cpfCliente);
         Vendedor vendedor = ServiceVendedor.verificarCpfVendedorCadastrado(cpfVendedor);
 
-        Venda venda = new Venda(cliente, vendedor,valor, data);
+        Venda venda = new Venda(cliente, vendedor, valor, data);
         listaVendas.add(venda);
         System.out.println("\n\tCadastro da venda feito com sucesso!!!");
         return venda;
@@ -22,20 +22,23 @@ public class ServiceVenda {
             System.out.println(referenciaVenda);
         }
     }
-    public void consultarCompras(String cpf){
+
+    public static List<Venda> consultarCompras(String cpf) {
         for (Venda referenciaCliente : listaVendas) {
             if (referenciaCliente.getCpf().equals(cpf)) {
-                System.out.println(referenciaCliente);
+
             }
         }
-
+        return listaVendas;
     }
-    public void consultarVendas(String email){
+
+    public static List<Venda> consultarVendas(String email) {
         for (Venda referenciaVendedor : listaVendas) {
             if (referenciaVendedor.getEmail().equals(email)) {
                 System.out.println(referenciaVendedor);
+
             }
         }
-
+        return listaVendas;
     }
 }
