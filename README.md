@@ -12,6 +12,7 @@ Faça um sistema responsável por registros de vendas de uma organização!
 ## **Entrega Mínima:**
 
  - [x] O projeto permite cadastrar diversas vendas no sistema.
+
 ![enter image description here](https://i.ibb.co/py4BK4N/image.png)
 
 
