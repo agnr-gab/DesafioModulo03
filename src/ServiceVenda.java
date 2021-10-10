@@ -23,10 +23,11 @@ public class ServiceVenda {
         }
     }
 
-    public static List<Venda> consultarCompras(String cpf) {
+    public static List<Venda> consultarCompras(String cpf) throws Exception{
+        ServiceCliente.verificarCpfClienteCadastrado(cpf);
         for (Venda referenciaCliente : listaVendas) {
             if (referenciaCliente.getCpf().equals(cpf)) {
-
+                System.out.println(referenciaCliente);
             }
         }
         return listaVendas;
