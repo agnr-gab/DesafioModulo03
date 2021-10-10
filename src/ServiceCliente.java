@@ -30,11 +30,14 @@ public class ServiceCliente {
 
     }
 
-    public static void verificarCpfClienteCadastrado(String cpf) throws Exception {
+    public static Cliente verificarCpfClienteCadastrado(String cpf) throws Exception {
         for (Cliente referenciaCliente : listaClientes) {
-            if (!referenciaCliente.getCpf().equals(cpf))
-                throw new Exception("Esse CPF não está cadastrado! Faça o cadastro primeiramente!");
-        }
+            if (!referenciaCliente.getCpf().equals(cpf)){
+                return referenciaCliente;
+            }
+
+        } throw new Exception("Esse CPF não está cadastrado! Faça o cadastro primeiramente!");
+
     }
 
     public static Cliente cadastrarCliente(String nome, String cpf, String email) throws Exception {
