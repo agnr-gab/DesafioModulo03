@@ -42,13 +42,13 @@ public class Sistema {
     public static Venda cadastrarVenda() throws Exception {
 
         System.out.println("\n\t\t\t____Cadastro vendas____");
-        String cpfCliente = leitorDados("\tDigite o cpf do cliente: ").nextLine();
-        String cpfVendedor = leitorDados("\tDigite o cpf do vendedor: ").nextLine();
+        String cliente = leitorDados("\tDigite o cpf do cliente: ").nextLine();
+        String vendedor = leitorDados("\tDigite o cpf do vendedor: ").nextLine();
         double valor = leitorDados("\n\tDigite o valor a ser pago: ").nextDouble();
         String data = leitorDados("\tDigite a data de registro da venda: ").nextLine();
         //System.out.println("\n\tCadastro da venda feito com sucesso!!!");
 
-        return ServiceVenda.cadastrarVenda(valor, data);
+        return ServiceVenda.cadastrarVenda(cliente, vendedor,valor, data);
     }
 
     public static boolean executar() throws Exception {
