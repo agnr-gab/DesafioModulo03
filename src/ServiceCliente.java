@@ -32,7 +32,7 @@ public class ServiceCliente {
 
     public static Cliente verificarCpfClienteCadastrado(String cpf) throws Exception {
         for (Cliente referenciaCliente : listaClientes) {
-            if (!referenciaCliente.getCpf().equals(cpf)){
+            if (referenciaCliente.getCpf().equals(cpf)){
                 return referenciaCliente;
             }
 
