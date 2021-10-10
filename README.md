@@ -1,6 +1,4 @@
-# Módulo 03 - Orientação à objetos
-
-## **DESAFIO DE MÓDULO**
+## **DESAFIO MÓDULO 3**
 
 Faça um sistema responsável por registros de vendas de uma organização!
 
@@ -14,15 +12,18 @@ Faça um sistema responsável por registros de vendas de uma organização!
 ## **Entrega Mínima:**
 
  - [x] O projeto permite cadastrar diversas vendas no sistema.
-
 ![enter image description here](https://i.ibb.co/py4BK4N/image.png)
+
+
 ![enter image description here](https://i.ibb.co/DCy4VHZ/image.png)
  
- - [ ] O sistema não permite cadastrar vendas para clientes não cadastrados.
- - [ ] O sistema não permite cadastrar vendas de vendedores não cadastrados.
+ - [x] O sistema não permite cadastrar vendas para clientes não cadastrados.
+ ![enter image description here](https://i.ibb.co/N95T6fb/image.png)
+ 
+ - [x] O sistema não permite cadastrar vendas de vendedores não cadastrados.
+ ![enter image description here](https://i.ibb.co/ThdGp1k/image.png)
  - [x] O sistema permite listar todas as vendas cadastradas.
- >***Entrega em Andamento:** necessário corrigir retorno do cliente e funcionário*
- ![enter image description here](https://i.ibb.co/5rGBz6p/image.png)
+ ![enter image description here](https://i.ibb.co/dmyPQy0/image.png)
  - [x] O sistema permite listar todos os vendedores cadastrados.
  ![enter image description here](https://i.ibb.co/J5rwnjb/image.png)
  ![enter image description here](https://i.ibb.co/N95YGnV/vendedores-cadastrados.jpg)
