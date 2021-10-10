@@ -27,6 +27,7 @@ public class ServiceVenda {
         ServiceCliente.verificarCpfClienteCadastrado(cpf);
         for (Venda referenciaCliente : listaVendas) {
             if (referenciaCliente.getCpf().equals(cpf)) {
+                listaVendas.add(referenciaCliente);
                 System.out.println(referenciaCliente);
             }
         }
