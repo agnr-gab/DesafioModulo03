@@ -27,6 +27,14 @@ public class ServiceVendedor implements Verificar {
         throw new Exception("Esse CPF não está cadastrado! Faça o cadastro primeiramente!");
     }
 
+    public static Vendedor verificarEmailVendedorCadastrado(String email) throws Exception {
+        for (Vendedor referenciaVendedor : listaVendedores) {
+            if (referenciaVendedor.getEmail().equalsIgnoreCase(email))
+                return referenciaVendedor;
+        }
+        throw new Exception("Esse E-mail não está cadastrado! Faça o cadastro primeiramente!");
+    }
+
     public static void validarEmailArroba(String email) throws Exception {
         if (!email.contains("@")) {
             throw new Exception("O Email digitado não é válido. Tente novamente!");
