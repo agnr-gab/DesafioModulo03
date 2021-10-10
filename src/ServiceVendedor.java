@@ -19,11 +19,12 @@ public class ServiceVendedor implements Verificar {
         return vendedor;
     }
 
-    public static void verificarCpfVendedorCadastrado(String cpf) throws Exception {
+    public static Vendedor verificarCpfVendedorCadastrado(String cpf) throws Exception {
         for (Vendedor referenciaVendedor : listaVendedores) {
-            if (!referenciaVendedor.getCpf().equals(cpf))
-                throw new Exception("Esse CPF não está cadastrado! Faça o cadastro primeiramente!");
+            if (referenciaVendedor.getCpf().equals(cpf))
+                return referenciaVendedor;
         }
+        throw new Exception("Esse CPF não está cadastrado! Faça o cadastro primeiramente!");
     }
 
     public static void validarEmailArroba(String email) throws Exception {
