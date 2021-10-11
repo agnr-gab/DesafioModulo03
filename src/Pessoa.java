@@ -35,12 +35,13 @@ public abstract class Pessoa {
     public void setEmail(String email) {
         this.email = email;
     }
+
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("\nNome:\t" +nome);
-        retorno.append("\tCPF:" +cpf);
-        retorno.append("\tE-mail: " +email+"\n");
+        retorno.append("\nNome:\t" + nome);
+        retorno.append("\tCPF:" + cpf);
+        retorno.append("\tE-mail: " + email + "\n");
         return retorno.toString();
     }
 }
