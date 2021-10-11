@@ -4,6 +4,8 @@ import java.util.List;
 public class ServiceVenda {
     //cadastrar as vendas
     //listar as vendas
+    //pesquisar vendas via email
+    //pesquisar compras via cpf
     public static List<Venda> listaVendas = new ArrayList<>();
 
     public static Venda cadastrarVenda(String cpfCliente, String cpfVendedor, double valor, String data) throws Exception {
