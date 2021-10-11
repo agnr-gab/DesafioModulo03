@@ -27,7 +27,6 @@ public class Sistema {
         String nome = leitorDados("\n\tDigite o nome: ").nextLine();
         String cpf = leitorDados("\tDigite o CPF: ").nextLine();
         String email = leitorDados("\tDigite o e-mail: ").nextLine();
-        //System.out.println("\n\tCadastro do cliente feito com sucesso!!!");
 
         return ServiceCliente.cadastrarCliente(nome, cpf, email);
     }
@@ -48,7 +47,6 @@ public class Sistema {
         String vendedor = leitorDados("\tDigite o cpf do vendedor: ").nextLine();
         double valor = leitorDados("\n\tDigite o valor a ser pago: ").nextDouble();
         String data = leitorDados("\tDigite a data de registro da venda: ").nextLine();
-        //System.out.println("\n\tCadastro da venda feito com sucesso!!!");
 
         return ServiceVenda.cadastrarVenda(cliente, vendedor, valor, data);
     }
