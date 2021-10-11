@@ -55,7 +55,9 @@ Faça um sistema responsável por registros de vendas de uma organização!
 
 ## **Entrega Máxima:**
 
- - [ ] O sistema permite pesquisar todas as compras de um cliente em específico
-através de seu CPF.
- - [ ] O sistema permite pesquisar todas as vendas de um vendedor em específico
-através de seu e-mail.
+ - [x] O sistema permite pesquisar todas as compras de um cliente em específico **através de seu CPF**.
+ ![enter image description here](https://i.ibb.co/gJtCwgG/image.png) 
+ ![enter image description here](https://i.ibb.co/mCbVLYL/image.png)
+ - [x] O sistema permite pesquisar todas as vendas de um vendedor em específico **através de seu e-mail.**
+ ![enter image description here](https://i.ibb.co/HtzP2DL/image.png)
+ ![enter image description here](https://i.ibb.co/xzFXtDZ/image.png) 
